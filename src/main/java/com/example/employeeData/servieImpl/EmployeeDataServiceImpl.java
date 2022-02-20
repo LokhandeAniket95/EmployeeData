@@ -52,7 +52,7 @@ public class EmployeeDataServiceImpl implements EmployeeDataService {
 				response = new ResponseEntity<>(employeeData.getEmail().toString(), headers, HttpStatus.OK);
 			}
 		} catch (HttpClientErrorException e) {
-			throw new EmployeeException("Data not found");
+			throw new EmployeeException("Records not found");
 		}
 		return response;
 	}
